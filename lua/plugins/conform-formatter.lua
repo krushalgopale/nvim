@@ -17,19 +17,16 @@ return {
         ensure_installed = {
           "stylua",       
           "prettierd",    
-<<<<<<< HEAD
           "clang-format",  
           "golines", 
           "gofumpt", 
           "goimports",
           "ruff",
-=======
           "clang-format", 
           "gofmt", 
           "golines", 
           "gofumpt", 
           "goimports",
->>>>>>> 94a4811 (updated)
         },
         auto_update = true,
         run_on_start = true,
