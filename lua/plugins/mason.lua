@@ -10,7 +10,7 @@ return {
         "tailwindcss",
         "lua_ls",
         "gopls",
-        "pyright",
+        "jedi_language_server",
       },
     },
     dependencies = {
