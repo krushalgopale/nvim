@@ -48,7 +48,7 @@ return {
 			-- 	end,
 			-- }
 			--
-			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "pyright", "clangd")
+			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "jedi_language_server", "clangd")
 
 			vim.diagnostic.config({
 				virtual_text = {
