@@ -36,7 +36,7 @@ return {
 				capabilities = capabilities,
 			}
 
-      vim.lsp.config["jedi_language_server"] = {
+			vim.lsp.config["pylsp"] = {
 				capabilities = capabilities,
 			}
 			-- vim.lsp.config["pyright"] = {
@@ -48,7 +48,7 @@ return {
 			-- 	end,
 			-- }
 			--
-			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "jedi_language_server", "clangd")
+			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "pylsp", "clangd")
 
 			vim.diagnostic.config({
 				virtual_text = {
