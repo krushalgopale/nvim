@@ -36,15 +36,18 @@ return {
 				capabilities = capabilities,
 			}
 
-			vim.lsp.config["pyright"] = {
+      vim.lsp.config["jedi_language_server"] = {
 				capabilities = capabilities,
-				on_attach = function(client, bufnr)
-					-- Disable Pyright formatting
-					client.server_capabilities.documentFormattingProvider = false
-					client.server_capabilities.documentRangeFormattingProvider = false
-				end,
 			}
-
+			-- vim.lsp.config["pyright"] = {
+			-- 	capabilities = capabilities,
+			-- 	on_attach = function(client, bufnr)
+			-- 		-- Disable Pyright formatting
+			-- 		client.server_capabilities.documentFormattingProvider = false
+			-- 		client.server_capabilities.documentRangeFormattingProvider = false
+			-- 	end,
+			-- }
+			--
 			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "pyright", "clangd")
 
 			vim.diagnostic.config({
