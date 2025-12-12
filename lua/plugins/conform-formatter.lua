@@ -18,10 +18,10 @@ return {
           "stylua",       
           "prettierd",    
           "clang-format",  
-          "golines", 
-          "gofumpt", 
+          "golines",
+          "gofumpt",
           "goimports",
-          "black", 
+          "black",
         },
         auto_update = true,
         run_on_start = true,
@@ -38,7 +38,8 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "golines", "gofumpt", "goimports" },
 				javascript = { "prettierd" },
-        cpp = { "clang-format" }
+        cpp = { "clang-format" },
+        python = { "black" }
 			},
 		})
 
