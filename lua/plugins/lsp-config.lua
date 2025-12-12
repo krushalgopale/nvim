@@ -19,6 +19,7 @@ return {
         "ts_ls",
         "tailwindcss",
         "clangd",
+        "pyright",
       },
     },
   },
@@ -55,6 +56,11 @@ return {
       })
       lspconfig.pyright.setup({
         capabilities = capabilities,
+        on_attach = function(client, bufnr)
+          -- Disable Pyright formatting
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end,
       })
 
       vim.diagnostic.config({
