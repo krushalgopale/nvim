@@ -1,5 +1,5 @@
 return {
-    -- Mason setup
+  -- Mason setup
   {
     "williamboman/mason.nvim",
     lazy = false,
@@ -15,13 +15,13 @@ return {
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "stylua",       
-          "prettierd",    
-          "clang-format",  
+          "stylua",
+          "prettierd",
+          "clang-format",
           "golines",
           "gofumpt",
           "goimports",
-          "black",
+          "autopep8",
         },
         auto_update = true,
         run_on_start = true,
@@ -30,21 +30,21 @@ return {
   },
 
   -- Conform Setup
-	"stevearc/conform.nvim",
-	config = function()
-		require("conform").setup({
+  "stevearc/conform.nvim",
+  config = function()
+    require("conform").setup({
 
-			formatters_by_ft = {
-				lua = { "stylua" },
-				go = { "gofmt", "golines", "gofumpt", "goimports" },
-				javascript = { "prettierd" },
+      formatters_by_ft = {
+        lua = { "stylua" },
+        go = { "gofmt", "golines", "gofumpt", "goimports" },
+        javascript = { "prettierd" },
         cpp = { "clang-format" },
-        python = { "black" }
-			},
-		})
+        python = { "autopep8" }
+      },
+    })
 
-		vim.keymap.set("n", "<leader>f", function()
-			require("conform").format()
-		end, { noremap = true, silent = true })
-	end,
+    vim.keymap.set("n", "<leader>f", function()
+      require("conform").format()
+    end, { noremap = true, silent = true })
+  end,
 }
