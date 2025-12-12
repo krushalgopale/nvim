@@ -21,7 +21,7 @@ return {
           "golines", 
           "gofumpt", 
           "goimports",
-          "ruff", 
+          "black", 
         },
         auto_update = true,
         run_on_start = true,
