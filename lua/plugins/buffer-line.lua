@@ -5,6 +5,12 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
+      keys = {
+      { "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+      { "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+      { "<leader>bp", "<cmd>BufferLinePick<cr>", desc = "Buffer Pick" },
+      { "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer" },
+    },
     config = function()
       local bufferline = require("bufferline")
       bufferline.setup {
