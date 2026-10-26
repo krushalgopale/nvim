@@ -5,7 +5,7 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-      keys = {
+
       { "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
       { "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
       { "<leader>bp", "<cmd>BufferLinePick<cr>", desc = "Buffer Pick" },
@@ -20,7 +20,6 @@ return {
           always_show_bufferline = true,
           style_preset = bufferline.style_preset.no_italic,
           numbers = function(opts)
-            return string.format("%s", opts.ordinal)
           end,
           custom_filter = function(buf_number)
             -- filter out filetypes you don't want to see
@@ -41,4 +40,3 @@ return {
       }
     end,
   }
-}

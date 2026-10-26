@@ -10,7 +10,8 @@ return {
         "tailwindcss",
         "lua_ls",
         "gopls",
-        "pylsp",
+        "basedpyright",
+        "ruff"
       },
     },
     dependencies = {
@@ -39,6 +40,8 @@ return {
         "goimports", -- go formatter 
         "gofumpt", -- go formatter
         "golines", -- go formatter
+        "mypy", -- python linter
+        "ruff", -- python formatter
       },
     },
     dependencies = {

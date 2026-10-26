@@ -36,9 +36,10 @@ return {
 				capabilities = capabilities,
 			}
 
-			vim.lsp.config["pylsp"] = {
+			vim.lsp.config["basedpyright"] = {
 				capabilities = capabilities,
 			}
+			--
 			-- vim.lsp.config["pyright"] = {
 			-- 	capabilities = capabilities,
 			-- 	on_attach = function(client, bufnr)
@@ -46,9 +47,20 @@ return {
 			-- 		client.server_capabilities.documentFormattingProvider = false
 			-- 		client.server_capabilities.documentRangeFormattingProvider = false
 			-- 	end,
+			-- 	settings = {
+			-- 		pyright = {
+			-- 			disableOrganizeImports = true,
+			-- 		},
+			-- 		python = {
+			-- 			analysis = {
+			-- 				ignore = { "*" },
+			-- 				typecheckingMode = "off",
+			-- 			},
+			-- 		},
+			-- 	},
 			-- }
-			--
-			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "pylsp", "clangd")
+
+			vim.lsp.enable("lua_ls", "gopls", "html", "ts_ls", "tailwindcss", "cssls", "basedpyright", "clangd")
 
 			vim.diagnostic.config({
 				virtual_text = {
