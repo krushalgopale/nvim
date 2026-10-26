@@ -5,7 +5,7 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-
+    keys = {
       { "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
       { "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
       { "<leader>bp", "<cmd>BufferLinePick<cr>", desc = "Buffer Pick" },
@@ -40,3 +40,4 @@ return {
       }
     end,
   }
+}
